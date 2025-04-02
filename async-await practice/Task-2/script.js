@@ -1,8 +1,7 @@
 //  STEP 1: Select HTML elements
-
-// Input field for the country name
-// Button to start the fetch process
-// Div to display country details
+const countryInput = document.getElementById("country-input");
+const fetchButton = document.getElementById("fetch-country");
+const countryInfo = document.getElementById("country-info");
 
 // STEP 2: Create an asynchronous function to fetch country data
 

@@ -23,6 +23,7 @@ async function getCatInfo() {
 }
 
 catBtn.addEventListener("click", getCatInfo());
+
 //  STEP 3: Fetch data from the cat fact API
 // `await` pauses the code until the data is fully received
 

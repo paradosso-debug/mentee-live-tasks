@@ -4,22 +4,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Crypto Price Checker</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Anime Search</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
   <div class="container">
-    <h1>💰 Crypto Price Checker</h1>
-    <select id="crypto-select">
-      <option value="bitcoin">Bitcoin</option>
-      <option value="ethereum">Ethereum</option>
-      <option value="dogecoin">Dogecoin</option>
-    </select>
-    <button id="fetch-price">Get Price</button>
-    <div id="crypto-info"></div>
+    <h1>Anime Search</h1>
+    <input type="text" id="anime-input" placeholder="Enter anime title">
+    <button id="search-button">Search</button>
+    <div id="anime-info" class="anime-info">
+      <!-- Anime details will be displayed here -->
+    </div>
   </div>
-
   <script src="script.js"></script>
 </body>
 
