@@ -1,0 +1,10 @@
+### Test ping route
+GET http://localhost:8888/ping
+
+### Post test data
+POST http://localhost:8888/api/data
+Content-Type: application/json
+
+{
+  "message": "Hello from the client!"
+}

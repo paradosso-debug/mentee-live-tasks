@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>FS JSON API</title>
+</head>
+
+<body>
+  <h1>FS API Tester</h1>
+  <p>This button sends data to your backend and saves it in a file!</p>
+  <button onclick="postData()">Send Sample Data</button>
+
+  <script>
+    // This is our 'waiter' function — it takes an order when the button is clicked
+    async function postData() { //(async) — meaning it waits for the backend to reply before continuing.
+      const response = await fetch('/api/data', { //fetch('/api/data') sends a request to your kitchen. await = wait for the kitchen to reply.
+        method: 'POST', // This is the order type: "I'd like to give you something"
+        headers: { 'Content-Type': 'application/json' }, // This says "I'm sending you JSON (JavaScript Object Notation).
+        body: JSON.stringify({ //JSON.stringify() converts the object into a string the backend understands.
+          name: 'Frontend Test',
+          timestamp: new Date().toISOString() // The time of the order
+        })
+      });
+
+      // Once the kitchen (server) replies, we show the message
+      const text = await response.text();
+      alert(text); // Shows a pop-up with the server's response (e.g., "Saved to 1.json")
+    }
+  </script>
+</body>
+
+</html>
